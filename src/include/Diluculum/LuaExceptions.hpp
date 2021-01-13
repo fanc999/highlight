@@ -31,11 +31,13 @@
 #include <Diluculum/Types.hpp>
 #include <Diluculum/LuaValue.hpp>
 
+#include "hl-exports.h"
+
 
 namespace Diluculum
 {
    /// A generic Lua-related error.
-   class LuaError: public std::runtime_error
+   class _HL_API LuaError: public std::runtime_error
    {
       public:
          /** Constructs a \c LuaError object.
@@ -49,7 +51,7 @@ namespace Diluculum
 
 
    /// A Lua run-time error.
-   class LuaRunTimeError: public LuaError
+   class _HL_API LuaRunTimeError: public LuaError
    {
       public:
          /** Constructs a \c LuaRunTimeError object.
@@ -64,7 +66,7 @@ namespace Diluculum
 
 
    /// A Lua file-related error.
-   class LuaFileError: public LuaError
+   class _HL_API LuaFileError: public LuaError
    {
       public:
          /** Constructs a \c LuaFileError object.
@@ -78,7 +80,7 @@ namespace Diluculum
 
 
    /// An error while interpreting a chunk of Lua code.
-   class LuaSyntaxError: public LuaError
+   class _HL_API LuaSyntaxError: public LuaError
    {
       public:
          /** Constructs a \c LuaSyntaxError object.
@@ -93,7 +95,7 @@ namespace Diluculum
 
 
    /// A memory error reported by Lua.
-   class LuaMemoryError: public LuaError
+   class _HL_API LuaMemoryError: public LuaError
    {
       public:
          /** Constructs a \c LuaMemoryError object.
@@ -107,7 +109,7 @@ namespace Diluculum
 
 
    /// An error while executing the Lua error handler.
-   class LuaErrorError: public LuaError
+   class _HL_API LuaErrorError: public LuaError
    {
       public:
          /** Constructs a \c LuaErrorError object.
@@ -121,7 +123,7 @@ namespace Diluculum
 
 
    /// An error related to types when doing some Lua-related processing.
-   class LuaTypeError: public LuaError
+   class _HL_API LuaTypeError: public LuaError
    {
       public:
          /** Constructs a \c LuaTypeError object.
@@ -137,7 +139,7 @@ namespace Diluculum
    /** An error that happens when a certain type is expected but another one is
     *  found.
     */
-   class TypeMismatchError: public LuaError
+   class _HL_API TypeMismatchError: public LuaError
    {
       public:
          /** Constructs a \c TypeMismatchError object.

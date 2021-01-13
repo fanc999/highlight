@@ -36,6 +36,8 @@
 #include <Diluculum/LuaVariable.hpp>
 #include <Diluculum/Types.hpp>
 
+#include "hl-exports.h"
+
 
 namespace Diluculum
 {
@@ -47,7 +49,7 @@ namespace Diluculum
     *  without higher level operations. This is an attempt to allow me to do
     *  the kind of things I do most of the time without much effort.)
     */
-   class LuaState
+   class _HL_API LuaState
    {
       public:
          /** Constructs a \c LuaState that owns a <tt>lua_State*</tt>. In other

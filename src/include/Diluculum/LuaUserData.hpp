@@ -31,6 +31,8 @@
 #include <lua.hpp>
 #include <Diluculum/Types.hpp>
 
+#include "hl-exports.h"
+
 
 namespace Diluculum
 {
@@ -42,7 +44,7 @@ namespace Diluculum
     *        block of memory that can be (via a \c LuaValue and a \c LuaState)
     *        stored in or read from a userdata in Lua state.
     */
-   class LuaUserData
+   class _HL_API LuaUserData
    {
       public:
 

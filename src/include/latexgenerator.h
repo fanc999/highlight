@@ -32,6 +32,7 @@ along with Highlight.  If not, see <http://www.gnu.org/licenses/>.
 #include <iostream>
 #include <sstream>
 
+#include "hl-exports.h"
 #include "codegenerator.h"
 #include "version.h"
 #include "charcodes.h"
@@ -50,7 +51,7 @@ namespace highlight
 * @author Andre Simon
 */
 
-class LatexGenerator : public highlight::CodeGenerator
+class _HL_API LatexGenerator : public highlight::CodeGenerator
 {
 public:
     LatexGenerator();

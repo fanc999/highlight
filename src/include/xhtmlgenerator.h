@@ -29,6 +29,7 @@ along with Highlight.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef XHTMLGENERATOR_H
 #define XHTMLGENERATOR_H
 
+#include "hl-exports.h"
 #include "htmlgenerator.h"
 
 namespace highlight
@@ -45,7 +46,7 @@ namespace highlight
 */
 
 
-class XHtmlGenerator : public highlight::HtmlGenerator
+class _HL_API XHtmlGenerator : public highlight::HtmlGenerator
 {
 public:
 

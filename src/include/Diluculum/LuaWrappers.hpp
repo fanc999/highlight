@@ -35,6 +35,7 @@
 #include <Diluculum/LuaState.hpp>
 #include <Diluculum/LuaUtils.hpp>
 
+#include "hl-exports.h"
 
 namespace Diluculum
 {
@@ -48,6 +49,7 @@ namespace Diluculum
        *         this function.
        *  @note This is not intended to be called by Diluculum users.
        */
+      _HL_API
       void ReportErrorFromCFunction (lua_State* ls, const::std::string& what);
 
 
@@ -58,7 +60,7 @@ namespace Diluculum
        *  a way to get some code executed in a macro call that happens at the
        *  global scope, outside of a function definition.
        */
-      class ClassTableFiller
+      class _HL_API ClassTableFiller
       {
          public:
             /** Adds the function \c func to the table \c classTable, with a key

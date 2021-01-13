@@ -30,6 +30,7 @@ along with Highlight.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <string>
 
+#include "hl-exports.h"
 #include "codegenerator.h"
 
 
@@ -46,7 +47,7 @@ namespace highlight
 * @author Andre Simon
 */
 
-class TexGenerator : public highlight::CodeGenerator
+class _HL_API TexGenerator : public highlight::CodeGenerator
 {
 public:
 

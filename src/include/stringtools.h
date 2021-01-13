@@ -32,6 +32,8 @@ along with Highlight.  If not, see <http://www.gnu.org/licenses/>.
 #include <vector>
 #include <sstream>
 
+#include "hl-exports.h"
+
 using namespace std;
 
 /// Contains methods for string manipulation
@@ -52,6 +54,7 @@ enum KeywordCase {
     \param kcase case modification indicator
     \return modified string
 */
+_HL_API
 string change_case ( const string & s,
                      const KeywordCase kcase = CASE_LOWER ) throw();
 
@@ -59,14 +62,17 @@ string change_case ( const string & s,
    \param value String
    \return string trimmed on the right
 */
+_HL_API
 string trimRight ( const string &value );
 
+_HL_API
 string trim(const string& s);
 
 /** Split string and return items separated by a delimiter
     \param s string containing tokens
     \param delim Token delimiter
     \return vector containing found tokens */
+_HL_API
 vector <string> splitString ( const string& s, unsigned char delim );
 
 /** Convert string to a numeric value of the given type
@@ -81,12 +87,16 @@ bool str2num ( T &val, const std::string& s, std::ios_base& ( *f ) ( std::ios_ba
     return ! ( iss >> f >> val ).fail();
 }
 
+_HL_API
 int calcWeight(const string&s);
 
+_HL_API
 string getPathAcronym(const string&path, char delim);
 
+_HL_API
 bool endsWith(std::string const & value, std::string const & ending);
 
+_HL_API
 int utf8_strlen(const string& str);
 }
 

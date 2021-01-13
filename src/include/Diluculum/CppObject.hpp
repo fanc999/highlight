@@ -28,6 +28,8 @@
 #ifndef _DILUCULUM_CPP_OBJECT_HPP_
 #define _DILUCULUM_CPP_OBJECT_HPP_
 
+#include "hl-exports.h"
+
 namespace Diluculum
 {
    namespace Impl
@@ -35,7 +37,7 @@ namespace Diluculum
       /** The data that is stored as userdata when a C++ object is exported to
        *  or instantiated in Lua.
        */
-      struct CppObject
+      struct _HL_API CppObject
       {
          public:
             /// Pointer to the actual object.

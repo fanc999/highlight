@@ -30,10 +30,11 @@
 #include <map>
 #include <vector>
 
+#include "hl-exports.h"
 
 namespace Diluculum
 {
-   class LuaValue;
+   class _HL_API LuaValue;
 
    /** A list of <tt>LuaValue</tt>s. Used, for example, to represent the return
     *  value of a Lua function call. In this case, the first return value is

@@ -30,6 +30,7 @@
 #include <vector>
 #include <Diluculum/LuaValue.hpp>
 
+#include "hl-exports.h"
 
 namespace Diluculum
 {
@@ -40,7 +41,7 @@ namespace Diluculum
     *  <p><tt>LuaVariable</tt>s cannot be directly constructed. They are
     *  designed to be returned by <tt>LuaState</tt>'s subscript operator.
     */
-   class LuaVariable
+   class _HL_API LuaVariable
    {
       friend class LuaState;
 

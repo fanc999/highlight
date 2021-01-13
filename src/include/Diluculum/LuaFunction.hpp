@@ -32,6 +32,8 @@
 #include <lua.hpp>
 #include <Diluculum/Types.hpp>
 
+#include "hl-exports.h"
+
 
 namespace Diluculum
 {
@@ -46,7 +48,7 @@ namespace Diluculum
     *        interpreter. Thus, it does not make sense to call a \c LuaFunction
     *        object directly. To call a \c LuaFunction, use \c LuaState::call().
     */
-   class LuaFunction
+   class _HL_API LuaFunction
    {
       public:
 

@@ -34,6 +34,7 @@ along with Highlight.  If not, see <http://www.gnu.org/licenses/>.
 #include <stack>
 #include <vector>
 
+#include "hl-exports.h"
 #include "syntaxreader.h"
 #include "themereader.h"
 
@@ -54,7 +55,7 @@ namespace highlight
 
 * @author Andre Simon
 */
-class ReGroup
+class _HL_API ReGroup
 {
 public:
 
@@ -140,7 +141,7 @@ public:
 * @author Andre Simon
 */
 
-class CodeGenerator
+class _HL_API CodeGenerator
 {
 
 public:

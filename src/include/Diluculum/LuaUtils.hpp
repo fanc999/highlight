@@ -29,6 +29,8 @@
 
 #include <Diluculum/LuaValue.hpp>
 
+#include "hl-exports.h"
+
 namespace Diluculum
 {
 
@@ -40,6 +42,7 @@ namespace Diluculum
     *         \c LuaValue. This can happen if the value at that position is, for
     *         example, a "Lua Thread" that is not supported by \c LuaValue.
     */
+   _HL_API
    LuaValue ToLuaValue (lua_State* state, int index);
 
    /** Pushes the value stored at \c value into the Lua stack of \c state. For
@@ -50,6 +53,7 @@ namespace Diluculum
     *        \c Nil as key will be ignored. (Since Lua does not support \c nil
     *        as a table index.)
     */
+   _HL_API
    void PushLuaValue (lua_State* state, const LuaValue& value);
 
 } // namespace Diluculum

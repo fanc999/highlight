@@ -42,6 +42,7 @@ along with Highlight.  If not, see <http://www.gnu.org/licenses/>.
 #include <Diluculum/LuaVariable.hpp>
 #include <Diluculum/LuaFunction.hpp>
 
+#include "hl-exports.h"
 #include "platform_fs.h"
 #include "enums.h"
 
@@ -52,7 +53,7 @@ using namespace std;
 
 namespace highlight
 {
-class RegexElement;
+class _HL_API RegexElement;
 
 /** maps keywords and the corresponding class IDs*/
 typedef map <string, int> KeywordMap;
@@ -67,7 +68,7 @@ typedef map <string, bool> AllowInnerSectionsMap;
 
 * @author Andre  Simon
 */
-class SyntaxReader
+class _HL_API SyntaxReader
 {
 
 public:
@@ -482,7 +483,7 @@ private:
   A RegexElement associates a regular expression with the state information
   (opening and closing state, pattern, keyword class, keyword group id, language name)
 */
-class RegexElement
+class _HL_API RegexElement
 {
 public:
     RegexElement()

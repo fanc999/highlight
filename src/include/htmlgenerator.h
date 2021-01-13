@@ -31,6 +31,7 @@ along with Highlight.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <string>
 
+#include "hl-exports.h"
 #include "codegenerator.h"
 
 #include "stylecolour.h"
@@ -49,7 +50,7 @@ namespace highlight
 * @author Andre Simon
 */
 
-class HtmlGenerator  : public highlight::CodeGenerator
+class _HL_API HtmlGenerator  : public highlight::CodeGenerator
 {
 public:
 

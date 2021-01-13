@@ -52,6 +52,8 @@
 	#pragma clang diagnostic ignored "-Wshorten-64-to-32"
 #endif
 
+#include "hl-exports.h"
+
 //-----------------------------------------------------------------------------
 // astyle namespace
 //-----------------------------------------------------------------------------
@@ -183,7 +185,7 @@ enum LineEndFormat
 // this class.
 //-----------------------------------------------------------------------------
 
-class ASSourceIterator
+class _HL_API ASSourceIterator
 {
 public:
 	ASSourceIterator() = default;
@@ -204,7 +206,7 @@ public:
 // It enables a return from anywhere in the method.
 //-----------------------------------------------------------------------------
 
-class ASPeekStream
+class _HL_API ASPeekStream
 {
 private:
 	ASSourceIterator* sourceIterator;
@@ -232,17 +234,17 @@ public:
 class ASResource
 {
 public:
-	void buildAssignmentOperators(vector<const string*>* assignmentOperators);
-	void buildCastOperators(vector<const string*>* castOperators);
-	void buildHeaders(vector<const string*>* headers, int fileType, bool beautifier = false);
-	void buildIndentableMacros(vector<const pair<const string, const string>* >* indentableMacros);
-	void buildIndentableHeaders(vector<const string*>* indentableHeaders);
-	void buildNonAssignmentOperators(vector<const string*>* nonAssignmentOperators);
-	void buildNonParenHeaders(vector<const string*>* nonParenHeaders, int fileType, bool beautifier = false);
-	void buildOperators(vector<const string*>* operators, int fileType);
-	void buildPreBlockStatements(vector<const string*>* preBlockStatements, int fileType);
-	void buildPreCommandHeaders(vector<const string*>* preCommandHeaders, int fileType);
-	void buildPreDefinitionHeaders(vector<const string*>* preDefinitionHeaders, int fileType);
+	_HL_API void buildAssignmentOperators(vector<const string*>* assignmentOperators);
+	_HL_API void buildCastOperators(vector<const string*>* castOperators);
+	_HL_API void buildHeaders(vector<const string*>* headers, int fileType, bool beautifier = false);
+	_HL_API void buildIndentableMacros(vector<const pair<const string, const string>* >* indentableMacros);
+	_HL_API void buildIndentableHeaders(vector<const string*>* indentableHeaders);
+	_HL_API void buildNonAssignmentOperators(vector<const string*>* nonAssignmentOperators);
+	_HL_API void buildNonParenHeaders(vector<const string*>* nonParenHeaders, int fileType, bool beautifier = false);
+	_HL_API void buildOperators(vector<const string*>* operators, int fileType);
+	_HL_API void buildPreBlockStatements(vector<const string*>* preBlockStatements, int fileType);
+	_HL_API void buildPreCommandHeaders(vector<const string*>* preCommandHeaders, int fileType);
+	_HL_API void buildPreDefinitionHeaders(vector<const string*>* preDefinitionHeaders, int fileType);
 
 public:
 	static const string AS_IF, AS_ELSE;
@@ -293,7 +295,7 @@ public:
 // Functions definitions are at the end of ASResource.cpp.
 //-----------------------------------------------------------------------------
 
-class ASBase : protected ASResource
+class _HL_API ASBase : protected ASResource
 {
 private:
 	// all variables should be set by the "init" function
@@ -329,7 +331,7 @@ protected:  // functions definitions are at the end of ASResource.cpp
 // Class ASBeautifier
 //-----------------------------------------------------------------------------
 
-class ASBeautifier : protected ASBase
+class _HL_API ASBeautifier : protected ASBase
 {
 public:
 	ASBeautifier();
@@ -580,7 +582,7 @@ private:  // variables
 // Class ASEnhancer
 //-----------------------------------------------------------------------------
 
-class ASEnhancer : protected ASBase
+class _HL_API ASEnhancer : protected ASBase
 {
 public:  // functions
 	ASEnhancer() = default;
@@ -654,7 +656,7 @@ private:
 // Class ASFormatter
 //-----------------------------------------------------------------------------
 
-class ASFormatter : public ASBeautifier
+class _HL_API ASFormatter : public ASBeautifier
 {
 public:	// functions
 	ASFormatter();
@@ -1079,8 +1081,8 @@ private:  // inline functions
 // astyle namespace global declarations
 //-----------------------------------------------------------------------------
 // sort comparison functions for ASResource
-bool sortOnLength(const string* a, const string* b);
-bool sortOnName(const string* a, const string* b);
+_HL_API bool sortOnLength(const string* a, const string* b);
+_HL_API bool sortOnName(const string* a, const string* b);
 
 }   // namespace astyle
 

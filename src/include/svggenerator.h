@@ -28,6 +28,7 @@ along with Highlight.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef SVGGenerator_H
 #define SVGGenerator_H
 
+#include "hl-exports.h"
 #include "codegenerator.h"
 
 namespace highlight
@@ -43,7 +44,7 @@ namespace highlight
 * @author Andre Simon
 */
 
-class SVGGenerator : public highlight::CodeGenerator
+class _HL_API SVGGenerator : public highlight::CodeGenerator
 {
 public:
 

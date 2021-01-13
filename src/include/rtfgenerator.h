@@ -30,6 +30,7 @@ along with Highlight.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <string>
 
+#include "hl-exports.h"
 #include "codegenerator.h"
 
 namespace highlight
@@ -74,7 +75,7 @@ typedef  map<string, struct PageSize> PagesizeMap;
 * @author Andre Simon
 */
 
-class RtfGenerator : public highlight::CodeGenerator
+class _HL_API RtfGenerator : public highlight::CodeGenerator
 {
 public:
 

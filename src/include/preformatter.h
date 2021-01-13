@@ -31,6 +31,8 @@ along with Highlight.  If not, see <http://www.gnu.org/licenses/>.
 #include <string>
 #include <set>
 
+#include "hl-exports.h"
+
 namespace highlight
 {
 
@@ -38,7 +40,7 @@ namespace highlight
 * @author Andre Simon
 */
 
-class PreFormatter
+class _HL_API PreFormatter
 {
 public:
 

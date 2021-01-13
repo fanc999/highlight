@@ -33,13 +33,14 @@ along with Highlight.  If not, see <http://www.gnu.org/licenses/>.
 #include <Diluculum/LuaState.hpp>
 #include <Diluculum/LuaFunction.hpp>
 #include <Diluculum/LuaVariable.hpp>
+#include "hl-exports.h"
 
 using namespace std;
 
 namespace highlight
 {
 
-class KeyStore
+class _HL_API KeyStore
 {
 public:
     /** Constructor */

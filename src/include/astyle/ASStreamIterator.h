@@ -34,7 +34,7 @@
 namespace astyle
 {
 
-class ASStreamIterator : public ASSourceIterator
+class _HL_API ASStreamIterator : public ASSourceIterator
 {
 	public:
 		bool checkForEmptyLine;

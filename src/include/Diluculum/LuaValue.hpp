@@ -36,6 +36,8 @@
 #include <Diluculum/LuaFunction.hpp>
 #include <Diluculum/Types.hpp>
 
+#include "hl-exports.h"
+
 
 namespace Diluculum
 {
@@ -48,7 +50,7 @@ namespace Diluculum
     *  table, then it contains a collection of keys and values. Similarly, if it
     *  holds a userdata, it actually contains a block of memory with some data.
     */
-   class LuaValue
+   class _HL_API LuaValue
    {
       public:
          /// Constructs a \c LuaValue with a \c nil value.

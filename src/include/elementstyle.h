@@ -28,6 +28,7 @@ along with Highlight.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef ELEMENTSTYLE_H
 #define ELEMENTSTYLE_H
 
+#include "hl-exports.h"
 #include "stylecolour.h"
 
 using namespace std;
@@ -40,7 +41,7 @@ namespace highlight
 * @author Andre Simon
 */
 
-class ElementStyle
+class _HL_API ElementStyle
 {
 public:
 

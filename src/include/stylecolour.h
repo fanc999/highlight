@@ -28,6 +28,7 @@ along with Highlight.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef STYLECOLOUR_H
 #define STYLECOLOUR_H
 
+#include "hl-exports.h"
 #include "enums.h"
 
 #include <string>
@@ -48,7 +49,7 @@ struct RGBVal {
         iBlue;   ///< Blue value
 };
 
-class Colour
+class _HL_API Colour
 {
 public:
     /** Constructor

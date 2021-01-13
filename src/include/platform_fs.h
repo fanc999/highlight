@@ -23,35 +23,47 @@ along with Highlight.  If not, see <http://www.gnu.org/licenses/>.
 #include <iostream>
 #include <vector>
 
+#include "hl-exports.h"
+
 namespace Platform
 {
-extern const char pathSeparator;
+extern _HL_API const char pathSeparator;
 
+_HL_API
 std::string getAppPath();
 
+_HL_API
 std::string getHomePath();
 
+_HL_API
 std::string getTempFilePath();
 
 
 /** \param fileList Vector where found entries will be stored
     \param  wildcard Directory path and wildcard
     \param recursiveSearch Test if directory should be searched recursively */
+_HL_API
 bool getDirectoryEntries ( std::vector<std::string> &fileList,
                            std::string wildcard,
                            bool recursiveSearch=false );
 
+_HL_API
 void getFileNames ( const std::string &directory,const std::string &wildcard,
                     std::vector<std::string> &fileName );
 
+_HL_API
 int wildcmp ( const char *wild, const char *data );
 
+_HL_API
 bool fileExists(const std::string &fName);
 
+_HL_API
 off_t fileSize(const std::string& fName);
 
+_HL_API
 int isColorEscCapable();
 
+_HL_API
 int isDarkTerminal();
 
 }

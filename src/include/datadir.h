@@ -32,6 +32,7 @@ along with Highlight.  If not, see <http://www.gnu.org/licenses/>.
 #include <boost/xpressive/xpressive_dynamic.hpp>
 #include <Diluculum/LuaState.hpp>
 
+#include "hl-exports.h"
 #include "stringtools.h"
 
 using namespace std;
@@ -46,7 +47,7 @@ typedef map<string, string> StringMap;
     returned.
  **/
 
-class DataDir
+class _HL_API DataDir
 {
     vector <string> possibleDirs;
     

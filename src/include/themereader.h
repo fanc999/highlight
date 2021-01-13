@@ -34,6 +34,7 @@ along with Highlight.  If not, see <http://www.gnu.org/licenses/>.
 #include <Diluculum/LuaFunction.hpp>
 #include <Diluculum/LuaVariable.hpp>
 
+#include "hl-exports.h"
 #include "elementstyle.h"
 #include "stylecolour.h"
 
@@ -52,7 +53,7 @@ typedef KeywordStyles::const_iterator KSIterator;
  * @author Andre Simon
  */
 
-class ThemeReader
+class _HL_API ThemeReader
 {
 private:
     ElementStyle comment, slcomment, str, dstr,
