@@ -27,6 +27,7 @@ along with Highlight.  If not, see <http://www.gnu.org/licenses/>.
 #include "themereader.h"
 #include "keystore.h"
 #include <Diluculum/LuaState.hpp>
+#include <algorithm>
 #include <sstream>
 #include <iostream>
 #include <cmath>
